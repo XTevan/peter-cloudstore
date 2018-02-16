@@ -7,13 +7,19 @@
 ## Project
 
 The idea behind this project is to test and practice the usage and development using several technologies like:
-- Spring ecosystem
-  - Spring Boot
-  - Spring Data
+- Spring
+  - Boot
+  - Data
   - Web 
   - Security
-- Netflix OSS
+  - Cloud Netflix
 - Flyway
 - Jenkins
 - AWS
+- Docker
+- Unit Testing
+  - JUnit
+  - Mockito
+- Newman
+- Swagger
 
