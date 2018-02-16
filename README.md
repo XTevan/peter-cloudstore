@@ -14,10 +14,10 @@ The idea behind this project is to test and practice the usage and development u
 - Newman
 - Spring
   - Boot
-  - Data
-  - Web 
-  - Security
   - Cloud Netflix
+  - Data
+  - Security  
+  - Web 
 - Swagger
 - Unit Testing
   - JUnit
