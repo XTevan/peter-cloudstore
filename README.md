@@ -7,19 +7,21 @@
 ## Project
 
 The idea behind this project is to test and practice the usage and development using several technologies like:
+- AWS
+- Docker
+- Flyway
+- Jenkins
+- Newman
 - Spring
   - Boot
   - Data
   - Web 
   - Security
   - Cloud Netflix
-- Flyway
-- Jenkins
-- AWS
-- Docker
+- Swagger
 - Unit Testing
   - JUnit
   - Mockito
-- Newman
-- Swagger
+
+
 
