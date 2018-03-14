@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
+import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class FilmService {
@@ -25,5 +27,12 @@ public class FilmService {
         return filmRepository.findAll();
     }
 
+    public Optional<Film> findById(UUID id){
+        return filmRepository.findById(id);
+    }
+
+    public Film create(Film film){
+        return filmRepository.save(film);
+    }
 
 }

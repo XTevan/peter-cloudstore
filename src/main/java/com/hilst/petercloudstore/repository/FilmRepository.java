@@ -10,7 +10,7 @@ import java.util.UUID;
 public interface FilmRepository extends Repository<Film,UUID> {
 
     List<Film> findAll();
-    Optional<Film> findOne(UUID id);
-    void save(Film film);
+    Optional<Film> findById(UUID id);
+    Film save(Film film);
     void delete(Film film);
 }

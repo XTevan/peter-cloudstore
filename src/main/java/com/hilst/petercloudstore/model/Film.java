@@ -21,6 +21,8 @@ public class Film {
     private String language;
     private String summary;
 
+    public Film() {}
+
     public Film(UUID id, String name, LocalDate released, String country, String language, String summary) {
         this.id = id;
         this.name = name;
