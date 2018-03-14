@@ -7,10 +7,13 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-public interface FilmRepository extends Repository<Film,UUID> {
+public interface FilmRepository extends Repository<Film, UUID> {
 
     List<Film> findAll();
+
     Optional<Film> findById(UUID id);
+
     Film save(Film film);
+
     void delete(Film film);
 }

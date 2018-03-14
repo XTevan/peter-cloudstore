@@ -23,15 +23,15 @@ public class FilmService {
         this.filmRepository = filmRepository;
     }
 
-    public Collection<Film> findAll(){
+    public Collection<Film> findAll() {
         return filmRepository.findAll();
     }
 
-    public Optional<Film> findById(UUID id){
+    public Optional<Film> findById(UUID id) {
         return filmRepository.findById(id);
     }
 
-    public Film create(Film film){
+    public Film create(Film film) {
         return filmRepository.save(film);
     }
 

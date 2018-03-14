@@ -13,7 +13,7 @@ public class Film {
 
     @Id
     @GeneratedValue
-    @Type(type="uuid-char")
+    @Type(type = "uuid-char")
     private UUID id;
     private String name;
     private LocalDate released;
@@ -21,7 +21,8 @@ public class Film {
     private String language;
     private String summary;
 
-    public Film() {}
+    public Film() {
+    }
 
     public Film(UUID id, String name, LocalDate released, String country, String language, String summary) {
         this.id = id;

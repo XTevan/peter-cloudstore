@@ -25,24 +25,25 @@ public class FilmController {
         this.filmService = filmService;
         Film film = new Film(UUID.randomUUID(),
                 "I'm All Right Jack",
-                LocalDate.of(1959,8,18),
+                LocalDate.of(1959, 8, 18),
                 "United Kingdom",
                 "English",
                 "A naive aristocrat in search of a career becomes caught up in the struggles between his profit-minded uncle and an aggressive labour union.");
 
         this.filmService.create(film);
     }
+
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<Collection<Film>> getFilms(){
-        return new ResponseEntity(filmService.findAll(),HttpStatus.OK);
+    public ResponseEntity<Collection<Film>> getFilms() {
+        return new ResponseEntity(filmService.findAll(), HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/{id}")
-    public ResponseEntity<Film> getFilmById(@PathVariable("id") UUID id){
+    public ResponseEntity<Film> getFilmById(@PathVariable("id") UUID id) {
         Optional<Film> film = filmService.findById(id);
         ResponseEntity<Film> result = new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        if(film.isPresent()){
-            result =  new ResponseEntity<>(film.get(), HttpStatus.OK);
+        if (film.isPresent()) {
+            result = new ResponseEntity<>(film.get(), HttpStatus.OK);
         }
 
         return result;
