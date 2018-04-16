@@ -23,14 +23,6 @@ public class FilmController {
 
     public FilmController(FilmService filmService) {
         this.filmService = filmService;
-        Film film = new Film(UUID.randomUUID(),
-                "I'm All Right Jack",
-                LocalDate.of(1959, 8, 18),
-                "United Kingdom",
-                "English",
-                "A naive aristocrat in search of a career becomes caught up in the struggles between his profit-minded uncle and an aggressive labour union.");
-
-        this.filmService.create(film);
     }
 
     @RequestMapping(method = RequestMethod.GET)

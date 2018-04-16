@@ -2,9 +2,7 @@ package com.hilst.petercloudstore.model;
 
 import org.hibernate.annotations.Type;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.UUID;
 
@@ -12,13 +10,15 @@ import java.util.UUID;
 public class Film {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Type(type = "uuid-char")
     private UUID id;
     private String name;
     private LocalDate released;
     private String country;
     private String language;
+
+    @Column(length=500)
     private String summary;
 
     public Film() {
